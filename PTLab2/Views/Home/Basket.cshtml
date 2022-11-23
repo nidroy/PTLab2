@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PTLab2.Models.Basket>
+
+<h2>Корзина</h2>
+<table class="table">
+    <tr><th>Товар</th><th>Цена товара</th><th>Количество товара</th><th>Стоимость</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.ProductPrice</td>
+            <td>@item.ProductCount</td>
+            <td>@item.Amount</td>
+        </tr>
+    }
+</table>
+<p>
+    <a asp-action="Pay">
+        <input type="submit" value="Оплатить" />
+    </a>
+</p>
+<p>
+    <a asp-action="ReturnIndex">
+        <input type="submit" value="Вернуться в главное меню" />
+    </a>
+</p>

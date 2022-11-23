@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PTLab2.Models.Product>
+
+<h2>Список товаров</h2>
+<table class="table">
+    <tr><th>Название</th><th>Цена</th><th>Количество</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Count</td>
+            <td>
+                <form asp-controller="Home" asp-action="BuyProduct" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Купить" />
+                </form>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="DeleteProduct" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    <a asp-action="CreateProduct">
+        <input type="submit" value="Добавить товар" />
+    </a>
+</p>
+<p>
+    <a asp-action="ReturnIndex">
+        <input type="submit" value="Вернуться в главное меню" />
+    </a>
+</p>
