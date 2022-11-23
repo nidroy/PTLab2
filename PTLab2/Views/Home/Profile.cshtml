@@ -1,0 +1,26 @@
+﻿@model PTLab2.Models.User
+
+<h2>Профиль</h2>
+<form asp-action="Authorization" asp-controller="home">
+    <p>
+        <label asp-for="Mail">Эл. Почта</label><br />
+        <input type="text" asp-for="Mail" />
+    </p>
+    <p>
+        <label asp-for="Password">Пароль</label><br />
+        <input type="password" asp-for="Password" />
+    </p>
+    <p>
+        <input type="submit" value="Авторизация" />
+    </p>
+</form>
+<p>
+    <a asp-action="Registration">
+        <input type="submit" value="Регистрация" />
+    </a>
+</p>
+<p>
+    <a asp-action="ReturnIndex">
+        <input type="submit" value="Вернуться в главное меню" />
+    </a>
+</p>

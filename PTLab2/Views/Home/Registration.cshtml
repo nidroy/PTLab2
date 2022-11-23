@@ -1,0 +1,28 @@
+﻿@model PTLab2.Models.User
+
+<h2>Карточка пользователя</h2>
+<form asp-action="Registration" asp-controller="home">
+    <p>
+        <label asp-for="Mail">Эл. Почта</label><br />
+        <input type="text" asp-for="Mail" />
+    </p>
+    <p>
+        <label asp-for="Password">Пароль</label><br />
+        <input type="password" asp-for="Password" />
+    </p>
+    <p>
+        <label asp-for="FirstName">Имя</label><br />
+        <input type="text" asp-for="FirstName" />
+    </p>
+    <p>
+        <label asp-for="LastName">Фамилия</label><br />
+        <input type="text" asp-for="LastName" />
+    </p>
+    <p>
+        <label asp-for="Birthday">Дата рождения</label><br />
+        <input type="date" asp-for="Birthday" />
+    </p>
+    <p>
+        <input type="submit" value="Зарегистрироваться" />
+    </p>
+</form>
