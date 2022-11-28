@@ -15,7 +15,7 @@ namespace PTLab2Test
 
         public HomeControllerTest()
         {
-            serviceProvider = DependencyInjection.InitilizeServices().BuildServiceProvider();
+            serviceProvider = AddDbContext.InitilizeServices().BuildServiceProvider();
         }
 
         [Fact]
